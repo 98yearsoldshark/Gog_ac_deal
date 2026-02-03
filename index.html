@@ -1,0 +1,250 @@
+<!--
+  Project site (GitHub Pages).
+  - No build step, pure static HTML/CSS.
+  - Includes minimal bilingual content + policy links for payment/KYC review.
+-->
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gemini 链接库</title>
+    <meta name="description" content="把 Gemini 分享链接整理成可检索的个人知识库：搜索、标签、AI 辅助、语义检索（可选）、多设备。" />
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-badge" aria-hidden="true"></div>
+            <div>
+              <div>Gemini 链接库</div>
+              <div class="brand-sub">Desktop · Offline-first · Search</div>
+            </div>
+          </div>
+
+          <div class="nav">
+            <a class="btn" href="#pricing">价格</a>
+            <a class="btn" href="#contact">联系</a>
+            <a class="btn" href="./privacy.html">隐私</a>
+            <a class="btn" href="./terms.html">条款</a>
+            <a class="btn" href="./refund.html">退款</a>
+            <span class="lang-toggle" role="group" aria-label="Language">
+              <button id="btn-zh" class="active" type="button">中文</button>
+              <button id="btn-en" type="button">EN</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="card">
+            <div class="lang lang-zh active">
+              <h1 class="title">把分享链接变成可检索的个人知识库</h1>
+              <p class="subtitle">
+                面向桌面端的离线优先工具：导入/整理 Gemini 分享链接，支持关键词搜索、标签/备注、语义检索（可选）与 AI 辅助检索。
+                未来计划加入「大脑地图/思维宇宙」视图。
+              </p>
+              <div class="kpi">
+                <div class="k">
+                  <div class="big">离线优先</div>
+                  <div class="small">本地保存，稳定第一</div>
+                </div>
+                <div class="k">
+                  <div class="big">多设备</div>
+                  <div class="small">支持授权/槽位模型</div>
+                </div>
+                <div class="k">
+                  <div class="big">AI 辅助</div>
+                  <div class="small">检索→再回答</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lang lang-en">
+              <h1 class="title">Turn shared links into a searchable personal library</h1>
+              <p class="subtitle">
+                Offline-first desktop app: import and organize Gemini shared links. Supports keyword search, tags/notes,
+                optional semantic search, and AI-assisted retrieval. A “brain map / mind universe” view is planned.
+              </p>
+              <div class="kpi">
+                <div class="k">
+                  <div class="big">Offline-first</div>
+                  <div class="small">Local storage, stability first</div>
+                </div>
+                <div class="k">
+                  <div class="big">Multi-device</div>
+                  <div class="small">License + slots model</div>
+                </div>
+                <div class="k">
+                  <div class="big">AI-assisted</div>
+                  <div class="small">Retrieve, then answer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="lang lang-zh active">
+              <h2 style="margin-top: 0">核心能力</h2>
+              <ul class="list">
+                <li>导入/管理链接：标题、标签、备注、收藏</li>
+                <li>关键词搜索（FTS）</li>
+                <li>语义检索（向量，可选，支持本地/远程 Qdrant）</li>
+                <li>AI 助手：先检索，再基于检索结果回答</li>
+                <li>网络/代理：可为不同模块绑定不同出网方式</li>
+              </ul>
+              <div style="height: 10px"></div>
+              <div class="fine">
+                说明：当前网页仅用于产品介绍与合规信息展示。具体功能以应用内为准。
+              </div>
+            </div>
+            <div class="lang lang-en">
+              <h2 style="margin-top: 0">Key features</h2>
+              <ul class="list">
+                <li>Manage links: title, tags, notes, favorites</li>
+                <li>Full-text search (FTS)</li>
+                <li>Optional semantic search (vector; local/remote Qdrant)</li>
+                <li>AI assistant: retrieve first, then answer from sources</li>
+                <li>Network/proxy per module</li>
+              </ul>
+              <div style="height: 10px"></div>
+              <div class="fine">
+                Note: This page is for product overview & compliance only. In-app behavior is the source of truth.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="card">
+          <div class="lang lang-zh active">
+            <h2>价格（一次性）</h2>
+            <div class="pricing">
+              <div class="card" style="box-shadow: none">
+                <p class="price">年卡 <small>一次性购买</small></p>
+                <div class="muted">适合大多数用户</div>
+                <div style="height: 10px"></div>
+                <span class="pill">WeChat Pay / Alipay（计划支持）</span>
+                <div style="height: 12px"></div>
+                <a class="btn primary" href="#contact">获取购买链接</a>
+                <div class="fine" style="margin-top: 10px">
+                  购买链接与自动开通能力上线后，此处会更新为可直接扫码支付的 checkout。
+                </div>
+              </div>
+              <div class="card" style="box-shadow: none">
+                <p class="price">永久 <small>一次性购买</small></p>
+                <div class="muted">一次付费长期使用</div>
+                <div style="height: 10px"></div>
+                <span class="pill">WeChat Pay / Alipay（计划支持）</span>
+                <div style="height: 12px"></div>
+                <a class="btn primary" href="#contact">获取购买链接</a>
+                <div class="fine" style="margin-top: 10px">
+                  如遇平台风控/网络问题，可提供替代购买方式（人工核验后开通）。
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lang lang-en">
+            <h2>Pricing (one-time)</h2>
+            <div class="pricing">
+              <div class="card" style="box-shadow: none">
+                <p class="price">1-Year <small>one-time purchase</small></p>
+                <div class="muted">Best for most users</div>
+                <div style="height: 10px"></div>
+                <span class="pill">WeChat Pay / Alipay (planned)</span>
+                <div style="height: 12px"></div>
+                <a class="btn primary" href="#contact">Get purchase link</a>
+                <div class="fine" style="margin-top: 10px">
+                  This will be updated to a hosted checkout with QR code once payment integration is ready.
+                </div>
+              </div>
+              <div class="card" style="box-shadow: none">
+                <p class="price">Lifetime <small>one-time purchase</small></p>
+                <div class="muted">Pay once, use long-term</div>
+                <div style="height: 10px"></div>
+                <span class="pill">WeChat Pay / Alipay (planned)</span>
+                <div style="height: 12px"></div>
+                <a class="btn primary" href="#contact">Get purchase link</a>
+                <div class="fine" style="margin-top: 10px">
+                  If checkout is blocked by network or risk controls, we can provide a fallback purchase method.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="card">
+          <div class="lang lang-zh active">
+            <h2>联系</h2>
+            <p class="subtitle">支持邮箱：<a href="mailto:support@example.com">support@example.com</a></p>
+            <p class="fine">
+              请把上面的邮箱替换为你的真实支持邮箱。支付平台审核通常会检查是否有可联系的支持渠道。
+            </p>
+          </div>
+          <div class="lang lang-en">
+            <h2>Contact</h2>
+            <p class="subtitle">Support email: <a href="mailto:support@example.com">support@example.com</a></p>
+            <p class="fine">
+              Replace this with your real support email. Payment/KYC reviews often check for a valid support channel.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="fine">
+            <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./refund.html">Refund</a>
+          </div>
+          <div class="fine" style="margin-top: 8px">
+            © <span id="y"></span> Gemini Link Library
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Minimal language toggle (no framework).
+      (function () {
+        var KEY = "site.lang";
+        var btnZh = document.getElementById("btn-zh");
+        var btnEn = document.getElementById("btn-en");
+        var y = document.getElementById("y");
+        if (y) y.textContent = String(new Date().getFullYear());
+
+        function setLang(lang) {
+          try { localStorage.setItem(KEY, lang); } catch (e) {}
+          var zhOn = lang !== "en";
+
+          document.documentElement.lang = zhOn ? "zh-CN" : "en";
+          btnZh.classList.toggle("active", zhOn);
+          btnEn.classList.toggle("active", !zhOn);
+
+          var nodes = document.querySelectorAll(".lang");
+          for (var i = 0; i < nodes.length; i++) nodes[i].classList.remove("active");
+          var on = document.querySelectorAll(zhOn ? ".lang-zh" : ".lang-en");
+          for (var j = 0; j < on.length; j++) on[j].classList.add("active");
+        }
+
+        var saved = "zh";
+        try {
+          saved = localStorage.getItem(KEY) || "zh";
+        } catch (e) {}
+        setLang(saved);
+
+        btnZh.addEventListener("click", function () { setLang("zh"); });
+        btnEn.addEventListener("click", function () { setLang("en"); });
+      })();
+    </script>
+  </body>
+</html>
+

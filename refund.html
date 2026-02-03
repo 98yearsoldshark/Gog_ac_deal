@@ -1,0 +1,157 @@
+<!--
+  Refund Policy page (GitHub Pages).
+  - No build step, pure static HTML/CSS.
+  - Bilingual (ZH/EN) with the same language toggle as index.html.
+-->
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>退款政策 · Gemini 链接库</title>
+    <meta name="description" content="Gemini 链接库 退款政策（Refund Policy）。" />
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-badge" aria-hidden="true"></div>
+            <div>
+              <div>Gemini 链接库</div>
+              <div class="brand-sub">Refund</div>
+            </div>
+          </div>
+
+          <div class="nav">
+            <a class="btn" href="./index.html">首页</a>
+            <a class="btn" href="./privacy.html">隐私</a>
+            <a class="btn" href="./terms.html">条款</a>
+            <a class="btn" href="./refund.html">退款</a>
+            <span class="lang-toggle" role="group" aria-label="Language">
+              <button id="btn-zh" class="active" type="button">中文</button>
+              <button id="btn-en" type="button">EN</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <section class="section">
+        <div class="card">
+          <div class="lang lang-zh active">
+            <h1 class="title" style="font-size: 26px">退款政策</h1>
+            <p class="fine">最后更新：2026-02-03</p>
+
+            <p class="subtitle" style="margin-top: 10px">
+              本政策适用于一次性购买（年卡/永久）。若你通过第三方平台购买（例如 Paddle/2Checkout/FastSpring 等），退款也可能需要遵循该平台的处理流程与时间。
+            </p>
+
+            <h2>退款窗口</h2>
+            <ul class="list">
+              <li>年卡：付款完成后 7 天内可申请全额退款。</li>
+              <li>永久：付款完成后 14 天内可申请全额退款。</li>
+            </ul>
+
+            <h2>如何申请</h2>
+            <ul class="list">
+              <li>请发送邮件到支持邮箱，并提供：订单号（或支付平台的收据）、购买邮箱（如有）、简要原因（可选）。</li>
+              <li>我们会在确认订单后提交退款请求，退款将原路退回到你的支付方式。</li>
+            </ul>
+
+            <h2>不支持退款的情况（示例）</h2>
+            <ul class="list">
+              <li>超过上述退款窗口。</li>
+              <li>订单无法被验证（无法提供订单号/收据，或平台记录不存在）。</li>
+              <li>明显的滥用/欺诈行为（例如盗刷/洗钱/批量脚本攻击）。</li>
+            </ul>
+
+            <h2>联系我们</h2>
+            <p class="subtitle">
+              支持邮箱：<a href="mailto:support@example.com">support@example.com</a>
+              <span class="fine">（请替换为你的真实邮箱）</span>
+            </p>
+          </div>
+
+          <div class="lang lang-en">
+            <h1 class="title" style="font-size: 26px">Refund Policy</h1>
+            <p class="fine">Last updated: 2026-02-03</p>
+
+            <p class="subtitle" style="margin-top: 10px">
+              This policy applies to one-time purchases (1-year / lifetime). If you purchased through a third-party provider (e.g., Paddle/2Checkout/FastSpring), refunds may also follow that provider's process and timelines.
+            </p>
+
+            <h2>Refund window</h2>
+            <ul class="list">
+              <li>1-year: full refund within 7 days of payment.</li>
+              <li>Lifetime: full refund within 14 days of payment.</li>
+            </ul>
+
+            <h2>How to request</h2>
+            <ul class="list">
+              <li>Email support with: order id (or provider receipt), purchase email (if any), and an optional reason.</li>
+              <li>After we verify the order, we will submit the refund request. Refunds are returned to the original payment method.</li>
+            </ul>
+
+            <h2>Non-refundable cases (examples)</h2>
+            <ul class="list">
+              <li>Requests beyond the refund window.</li>
+              <li>Unverifiable orders (no order id/receipt, or provider record not found).</li>
+              <li>Obvious abuse/fraud (e.g., stolen payments, money laundering, scripted attacks).</li>
+            </ul>
+
+            <h2>Contact</h2>
+            <p class="subtitle">
+              Support email: <a href="mailto:support@example.com">support@example.com</a>
+              <span class="fine">(replace with your real email)</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="fine">
+            <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a> · <a href="./refund.html">Refund</a>
+          </div>
+          <div class="fine" style="margin-top: 8px">© <span id="y"></span> Gemini Link Library</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Minimal language toggle (no framework).
+      (function () {
+        var KEY = "site.lang";
+        var btnZh = document.getElementById("btn-zh");
+        var btnEn = document.getElementById("btn-en");
+        var y = document.getElementById("y");
+        if (y) y.textContent = String(new Date().getFullYear());
+
+        function setLang(lang) {
+          try { localStorage.setItem(KEY, lang); } catch (e) {}
+          var zhOn = lang !== "en";
+
+          document.documentElement.lang = zhOn ? "zh-CN" : "en";
+          btnZh.classList.toggle("active", zhOn);
+          btnEn.classList.toggle("active", !zhOn);
+
+          var nodes = document.querySelectorAll(".lang");
+          for (var i = 0; i < nodes.length; i++) nodes[i].classList.remove("active");
+          var on = document.querySelectorAll(zhOn ? ".lang-zh" : ".lang-en");
+          for (var j = 0; j < on.length; j++) on[j].classList.add("active");
+        }
+
+        var saved = "zh";
+        try { saved = localStorage.getItem(KEY) || "zh"; } catch (e) {}
+        setLang(saved);
+
+        btnZh.addEventListener("click", function () { setLang("zh"); });
+        btnEn.addEventListener("click", function () { setLang("en"); });
+      })();
+    </script>
+  </body>
+</html>
+
